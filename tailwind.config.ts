@@ -57,6 +57,14 @@ export default {
           border: "hsl(var(--sidebar-border))",
           ring: "hsl(var(--sidebar-ring))",
         },
+        // Mathematical visualization colors
+        math: {
+          axis: "hsl(var(--math-axis))",
+          grid: "hsl(var(--math-grid))",
+          highlight: "hsl(var(--math-highlight))",
+          success: "hsl(var(--math-success))",
+          warning: "hsl(var(--math-warning))",
+        },
       },
       borderRadius: {
         lg: "var(--radius)",
@@ -80,10 +88,36 @@ export default {
             height: "0",
           },
         },
+        breathe: {
+          "0%, 100%": {
+            transform: "scale(1)",
+            opacity: "1",
+          },
+          "50%": {
+            transform: "scale(1.05)",
+            opacity: "0.8",
+          },
+        },
+        flash: {
+          "0%": {
+            opacity: "0",
+            transform: "scale(0.9)",
+          },
+          "30%": {
+            opacity: "1",
+            transform: "scale(1.02)",
+          },
+          "100%": {
+            opacity: "1",
+            transform: "scale(1)",
+          },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
+        "breath": "breathe var(--animation-breath) ease-in-out",
+        "flash": "flash var(--animation-slow) ease-out",
       },
     },
   },
